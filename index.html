@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANN Character Recognition - Can DOĞAN</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header class="project-header">
+        <h1>ARTIFICIAL NEURAL NETWORK COURSE PROJECT</h1>
+        <h2>6th Semester, April 2026</h2>
+    </header>
+
+    <div class="container">
+        <div class="left-section">
+            <div class="top-row-left">
+                <div class="card">
+                    <h3>Data Input / Test</h3>
+                    <textarea id="textInput" placeholder="Paste your matrix here...">. . . . . . . (9 lines of dots)</textarea>
+                    <div class="button-grid-layout">
+                        <label class="btn-modern btn-blue">Add File <input type="file" id="fileInput" hidden></label>
+                        <button class="btn-modern btn-blue" onclick="applyText()">Apply to Grid</button>
+                        <label class="btn-modern btn-blue-dark">Add Training Set <input type="file" id="trainFileInput" hidden></label>
+                        <label class="btn-modern btn-orange">Add Test Set <input type="file" id="testFileInput" hidden></label>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Drawing Area</h3>
+                    <div id="grid" class="grid"></div>
+                    <button class="btn-modern btn-danger" onclick="clearGrid()">Clear Grid</button>
+                </div>
+            </div>
+
+            <div class="card wide-card">
+                <h3>Controls</h3>
+                <div class="controls-layout">
+                    <div class="control-buttons">
+                        <button class="btn-modern btn-success" onclick="trainModel()">Train Model</button>
+                        <button class="btn-modern btn-blue" onclick="testModel()">Test Model</button>
+                        <button class="btn-modern btn-blue" onclick="predictGrid()">Predict Drawing</button>
+                        <div class="result" id="result">Ready for Action</div>
+                    </div>
+
+                    <div class="metrics-container">
+                        <div class="prediction-display">
+                            <div class="pred-item">Perceptron: <span id="p_guess">-</span></div>
+                            <div class="pred-item">MLP: <span id="m_guess">-</span></div>
+                        </div>
+
+                        <div id="metricsBox" class="horizontal-metrics">
+                            <div class="metric-group p-color">
+                                <h4>Perceptron Metrics</h4>
+                                <div id="p_metrics" class="metric-text">-</div>
+                            </div>
+                            <div class="metric-group m-color">
+                                <h4>MLP Metrics</h4>
+                                <div id="m_metrics" class="metric-text">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="card preview-card">
+                <h3>Training Set Preview</h3>
+                <div id="trainingPreview" class="training-grid"></div>
+                <button class="btn-modern btn-danger" onclick="clearTrainingPreview()">Clear</button>
+            </div>
+            <div class="card preview-card">
+                <h3>Test Set Preview</h3>
+                <div id="testPreview" class="training-grid"></div>
+                <button class="btn-modern btn-danger" onclick="clearTestPreview()">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="student-info">
+        <p><strong>Student:</strong> Can DOĞAN</p>
+        <p><strong>Student Id:</strong> 230508012</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
