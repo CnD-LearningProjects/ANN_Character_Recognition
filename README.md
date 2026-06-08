@@ -47,11 +47,11 @@ In addition to the machine learning models, a full-stack web application was dev
 ## Prediction Example
 
 <p align="center">
- <img src="screenshot/predict1.png" width="900">
+ <img src="screenshot/predicting1.png" width="900">
 </p>
 
 <p align="center">
- <img src="screenshot/predict2.png" width="900">
+ <img src="screenshot/predicting2.png" width="900">
 </p>
 
 *Figures 4–5 show character prediction results produced by Perceptron and MLP models.*
